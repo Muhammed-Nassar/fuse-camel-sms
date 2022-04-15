@@ -41,7 +41,7 @@ public class CamelRouter extends RouteBuilder {
         from("direct:sendSMS").description("SendTransfer REST service implementation route")
         .streamCaching()
         .log("Sending SMS")
-        .setBody(simple("SMS sent..."));
+        .setBody(simple("SMS sent....."));
       
         
         // @formatter:on Credit, Rev, Block/Unblock
