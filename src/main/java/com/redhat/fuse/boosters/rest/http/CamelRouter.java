@@ -34,7 +34,7 @@ public class CamelRouter extends RouteBuilder {
             .bindingMode(RestBindingMode.json);
         
         rest("/send").description("SMS Service")
-            .get("/{name}").outType(Greetings.class)
+            .get("/")
                 .route().routeId("sms-api")
                 .to("direct:sendSMS");        
         
